@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+
+<header class="py-2 px-8 bg-gray-100 shadow-inner h-16">
+    <nav aria-label="Breadcrumb" class="text-gray-600">
+      <ol class="list-none flex items-center space-x-6 text-sm">
+        <div>
+          <li>
+            <a routerLink="">Home</a>
+          </li>
+        </div>
+      </ol>
+      <h1 class="text-xl font-bold text-gray-900">Profile</h1>
+    </nav>
+</header>
+
+<div>
+    <div class="ml-10 mt-4">
+        <img
+          [src]="'https://avatar.tobi.sh/1'"
+          alt="Siddhi"
+          width="120"
+          height="120"
+          class="rounded-full"
+        />
+
+        <form class="mt-6 bg-white rounded-md grid grid-cols-2" id="signupForm">
+            <div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input class="w-full" type="text" id="firstName" placeholder="Siddhi" formControlName="firstName" cdkFocusInitial />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input class="w-full" type="text" id="lastName" placeholder="Patel" formControlName="lastName" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input class="w-full" type="email" id="email" formControlName="email" />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label for="firstName">Current Password</label>
+                  <input class="w-full" type="text" id="firstName" formControlName="firstName" cdkFocusInitial />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">New Password</label>
+                  <input class="w-full" type="text" id="lastName" formControlName="lastName" />
+                </div>
+              </div>
+            <div class="form-group">
+              <label for="org">Role</label>
+              <input class="w-full" type="text" id="org" placeholder="" formControlName="org" />
+            </div>
+
+            <footer class="flex justify-end space-x-4 mt-4">
+              <button btn type="button" class="bg-gray-100 text-gray-800 border focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:bg-gray-200 px-3 py-2 rounded">Cancel</button>
+              <button btn type="submit" form="signupForm" class="bg-primary-gradient text-white shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:shadow-lg px-3 py-2 rounded">
+                <!-- [disabled]="signupForm.invalid || (loading$ | async)" -->
+                Update
+              </button>
+            </footer>
+        </div>
+          </form>
+    </div>
+</div>

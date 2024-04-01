@@ -1,0 +1,11 @@
+nav {
+    li {
+      @apply relative;
+      &:not(:last-child):after {
+        content: '>';
+        position: absolute;
+        top: 1px;
+        right: -1rem;
+      }
+    }
+  }

@@ -1,0 +1,120 @@
+<header class="">
+  <section class="flex items-stretch space-x-10">
+    <div class="menu-open flex items-center relative">
+      <button class="flex mr-2 lg:hidden">
+        <i class="ri-menu-line"></i>
+      </button>
+      <a routerLink="">
+      <img
+        src="assets/images/logo.svg"
+        alt="Task.it"
+        width="55"
+        height="50"
+        class="rounded-full"
+      />
+      </a>
+      <!-- <p class="absolute top-0 -right-4 z-20 text-gray-500 text-sm">Beta</p> -->
+    </div>
+    <nav class="flex-1 flex items-center text-gray-400 font-medium relative">
+      <button class="menu-close lg:hidden absolute top-4 right-4">
+        <!-- <rmx-icon name="close-line"></rmx-icon> -->
+      </button>
+      <ol class="list-none flex items-center gap-6">
+        <li>
+          <a
+            class="flex items-center space-x-2"
+            routerLink="/dashboard/home"
+            routerLinkActive="text-gray-800"
+          >
+            <p>Home</p>
+          </a>
+        </li>
+        <ng-container >
+          <li>
+            <a
+              class="flex items-center space-x-2"
+              routerLink="/dashboard/tasks"
+              routerLinkActive="text-gray-800"
+            >
+              <p>My Tasks</p>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center space-x-2"
+              routerLink="/dashboard/projects"
+              routerLinkActive="text-gray-800"
+            >
+              <p>Projects</p>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center space-x-2"
+              routerLink="/dashboard/users"
+              routerLinkActive="text-gray-800"
+            >
+              <p>Users</p>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center space-x-2"
+              routerLink="/dashboard/orgs"
+              routerLinkActive="text-gray-800"
+            >
+              <p>Orgs</p>
+            </a>
+          </li>
+        </ng-container>
+      </ol>
+    </nav>
+  </section>
+  <section class="flex space-x-6 items-center">
+    <ng-container>
+      <a
+        class="text-xs text-gray-500 hidden md:block"
+        roputerLink=""
+        tippy="Org you are currently logged into"
+      >
+        Org: <span class="font-medium text-sm text-gray-700">Task.it</span>
+      </a>
+      <div class="grid grid-cols-1 gap-4 text-gray-400">
+        <!-- <button tippy="Coming soon">
+            <rmx-icon name="add-circle-line"></rmx-icon>
+          </button> -->
+        <button tippy="Coming soon" aria-label="Notifications">
+          <i class="ri-notification-line"></i>
+        </button>
+      </div>
+      <div
+        class="flex items-center space-x-2 cursor-pointer"
+        placement="bottom-start"
+        variation="menu"
+      >
+        <img
+          [src]="'https://avatar.tobi.sh/1'"
+          alt="Siddhi"
+          width="40"
+          height="40"
+          class="rounded-full"
+        />
+        <div class="flex items-center space-x-2">
+          <div class="flex flex-col items-end">
+            <p class="text-sm font-medium"><a routerLink="/profile">Siddhi</a></p>
+            <p class="text-xs text-gray-500">Admin</p>
+          </div>
+          <!-- <rmx-icon class="text-gray-400" style="width: 16px;height: 16px;" name="arrow-down-s-line"></rmx-icon> -->
+        </div>
+      </div>
+    </ng-container>
+  </section>
+</header>
+<ng-template #userDropdown let-hide>
+  <div class="flex flex-col w-48">
+    <div class="dropdown-item" routerLink="/app/profile" (click)="hide()">
+      Profile
+    </div>
+    <div class="text-red-600 dropdown-item" (click)="hide()">Logout</div>
+  </div>
+</ng-template>

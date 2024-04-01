@@ -1,0 +1,79 @@
+<div
+  class="w-screen h-screen bg-primary-gradient flex items-center justify-center px-5 py-5"
+>
+  <div
+    class="w-full mx-auto rounded-md shadow-lg items-center bg-white py-7 px-4"
+    style="max-width: 440px"
+  >
+    <!-- <h1 class="text-center text-black py-10 text-3xl font-bold">Angular Calculator</h1> -->
+    <!-- calculator screen   -->
+  
+      <div class="max-w-lg" cdkTrapFocus cdkTrapFocusAutoCapture>
+        <header class="mb-6 flex justify-center">
+          <img src="assets/images/logo-full.svg"  height="65" width="170" alt="Task.it" />
+        </header>
+        <div class="text-center">
+          <h1 class="text-lg font-medium pt-6 pb-2">Welcome</h1>
+          <p>Log in to Task.it to continue to Task.it App</p>
+        </div>
+        <form class="p-6 bg-white rounded-md" id="signupForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input class="w-full" type="email" id="email" formControlName="email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="w-full" type="password" id="password" formControlName="password" passwordToggle />
+          </div>
+          <p class="text-primary">Forgot password?</p>
+        </form>
+        <div class="px-6 pt-4 bg-white rounded-md flex justify-center">
+          <button btn class=" w-full bg-primary-gradient text-white shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:shadow-lg py-3 rounded" routerLink="/dashboard/home">
+            Login to Task.it
+          </button>
+        </div>
+        <div class="mt-8">
+          <p class="text-center text-gray-500">
+            Don't have an account yet?
+            <a routerLink="/signup" class="text-primary font-medium">Signup</a>
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- <main class="w-screen h-screen">
+  <section class="place-items-center bg-primary-gradient hidden lg:grid">
+    <div class="grid place-items-center bg-white">
+      <div
+        class="max-w-lg lg:w-10/12 w-9/12"
+        cdkTrapFocus
+        cdkTrapFocusAutoCapture
+      >
+        <header class="mb-6 flex justify-center">
+          <img
+            src="assets/images/logo-full.svg"
+            height="65"
+            width="170"
+            alt="Task.it"
+          />
+        </header>
+        <div class="p-6 bg-white rounded-md flex justify-center">
+          <button
+            btn
+            class="bg-primary-gradient text-white shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:shadow-lg px-3 py-2 rounded"
+          >
+            Login to Task.it
+          </button>
+        </div>
+        <div class="mt-8">
+          <p class="text-center text-gray-500">
+            Don't have an account yet?
+            <a routerLink="/signup" class="text-primary font-medium">Signup</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="grid place-items-center bg-white"></section>
+</main> -->
